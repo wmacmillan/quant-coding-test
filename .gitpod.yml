@@ -1,0 +1,8 @@
+ports:
+- port: 8050
+  onOpen: open-preview
+- port: 8888
+  onOpen: ignore
+tasks:
+- init: /workspace/gitpod-ds-dev/run.sh
+  command: cp -r /workspace/gitpod-ds-dev/.jupyter /home/gitpod/
