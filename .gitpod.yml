@@ -1,8 +1,27 @@
+image: wmacmillan/gp-general-dev
+
 ports:
 - port: 8050
-  onOpen: open-preview
+  onOpen: ignore
 - port: 8888
   onOpen: ignore
+
 tasks:
-- init: /workspace/gitpod-ds-dev/run.sh
-  command: cp -r /workspace/gitpod-ds-dev/.jupyter /home/gitpod/
+- command: pip install shortuuid matplotlib python-igraph && nohup jupyter notebook --config=/workspace/quant-coding-test/.jupyter/jupyter_notebook_config.py &
+
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    addCheck: true
+    addComment: false
+    addBadge: true
+
+vscode:
+  extensions:
+    - ms-python.python
+    - njpwerner.autodocstring
+    - ms-azuretools.vscode-docker
+    - eamodio.gitlens
