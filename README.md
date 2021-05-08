@@ -17,3 +17,50 @@ A jupyter notebook server has been automatically spawned when the IDE is launche
 
 ## Coding task
 
+You are going to estimate log cumulative daily returns from an "equal weighting" and a "equal weight, long/short, sector rotation" pair of strategies. The actual performance of the strategies is immaterial; the intent is to see how the data is processed and manipulated and whether you arrive at the appropriate end point.
+
+To complete this test, you must:
+
+1. Programtically get the current set of constituents of the S&P 500, [available as a csv here.](https://datahub.io/core/s-and-p-500-companies/r/constituents.csv).
+2. Align daily price data from IEXcloud to these, to create a Pandas dataframe with a multi-index of `Date`, `Symbol` and `Sector`, with the columns as OHLC(V).
+2. Go as far back in time as you can for every stock in the sectors noted below.
+3. Create returns. 
+  - Use the function included below. Close price, in an appropriately structured pandas dataframe, will return the results needed.
+  - The "equal weight" part of the strategy is to hold a single unit of each stock.
+  - For the long-only, equal weight, use the `Industrials` sector.
+  - The aggregate return from the L-S strategy is the sum of the separate long and short strategies.
+  - Go `Health Care` long, `Consumer Discretionary` short.
+4. Plot the returns.
+5. Calculate the Sharpe, Sortino, and Information Ratio statistics.
+  - Dummy information can be used for the RFR or other necesssary data.
+
+After completing the follow, submit a pull request back to this repository, and you're done. Godspeed.
+
+```python
+def make_ret(df, long: bool=True) -> pd.Series:
+    """Generates returns.
+
+    Args:
+        df (Pandas Dataframe or Series): A series or dataframe of daily close prices.
+        long (bool, optional): True indicates long-only, False is for short-only. Defaults to True.
+        
+    Returns:
+        pd.Series: cumulative daily returns, from logged daily close prices.
+    """    
+    from numpy import log
+    if long:
+        sign = 1
+    else:
+        sign = -1
+
+    ret = (
+        sign*log(df)
+        .groupby(level=1)
+        .diff()
+        .groupby(level=0)
+        .mean()
+        .cumsum()
+    )
+    return ret
+```
+

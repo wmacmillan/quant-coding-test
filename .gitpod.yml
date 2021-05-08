@@ -7,7 +7,7 @@ ports:
   onOpen: ignore
 
 tasks:
-- command: pip install shortuuid matplotlib python-igraph && nohup jupyter notebook pyex --config=/workspace/quant-coding-test/.jupyter/jupyter_notebook_config.py &
+- command: pip install shortuuid matplotlib pyex quantstats && nohup jupyter notebook pyex --config=/workspace/quant-coding-test/.jupyter/jupyter_notebook_config.py &
 
 
 github:
