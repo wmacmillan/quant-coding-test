@@ -6,7 +6,7 @@ This should be a straightforward experience for creating a standardized developm
 
 To start you will need to create two accounts, in addition to a github account.
 
-1. [gitpod.io](gitpod.io), for the devleopment environment.
+1. [gitpod.io](https://gitpod.io), for the devleopment environment.
 2. [IEXcloud.io](https://iexcloud.io/), for the price data.
 
 After you've created the Gitpod account, you can open up the development environment by clicking here:
