@@ -13,7 +13,7 @@ After you've created the Gitpod account, you can open up the development environ
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/wmacmillan/quant-coding-test)
 
-A jupyter notebook server has been automatically spawned when the IDE is launched. You can access it by clicking remote explorer on the left hand side context menu, which will open up the available ports. From there click on the globe icon for port 8888. This will open the server in a tab in your browser. See the screenshot below for the specific icons discussed. The password for the server is `financerocks!`.
+A Jupyter notebook server has been automatically spawned when the IDE is launched. You can access it by clicking remote explorer on the left hand side context menu, which will open up the available ports. From there click on the globe icon for port 8888. This will open the server in a tab in your browser. See the screenshot below for the specific icons discussed. The password for the Jupyter server is `financerocks!`. All libraries you might need to complete this task should be installed already in this environment and be accesable in Jupyter.
 
 **You will want to fork this repository and/or pin the environment in the [gitpod dashboard](gitpod.io) to avoid losing your work if you step away from the browser and the environment times out.**
 
