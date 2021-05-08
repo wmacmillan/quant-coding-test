@@ -24,7 +24,7 @@ You are going to estimate log cumulative daily returns from an "equal weighting"
 To complete this test, you must:
 
 1. Programtically get the current set of constituents of the S&P 500, [available as a csv here.](https://datahub.io/core/s-and-p-500-companies/r/constituents.csv).
-2. Align daily price data from IEXcloud to these, to create a Pandas dataframe with a multi-index of `Date`, `Symbol` and `Sector`, with the columns as OHLC(V).
+2. Align daily price data from IEXcloud to these, to create a Pandas dataframe with a multi-index of `Date`, `Symbol` and `Sector`, with the columns as OHLC(V). `pyEX` is a convenient library for this.
 3. Go as far back in time as you can for every stock in the sectors noted below.
 4. Create returns.
    - Use the [function](#Returns_function) included below. Close price, in an appropriately structured pandas dataframe, will return the results needed.
