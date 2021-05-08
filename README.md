@@ -75,4 +75,4 @@ def make_ret(df, long: bool=True) -> pd.Series:
 
 ![Click here.](ss.png)
 
-If you run into any issues, email the maintainer, Bill MacMillan at `bill at macmillan dot co`.
+If you run into any issues, email the maintainer, Bill MacMillan, at `bill at macmillan dot co`.
