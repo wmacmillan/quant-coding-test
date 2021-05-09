@@ -36,7 +36,7 @@ To complete this test, you must:
 6. Calculate the Sharpe, Sortino, and Information Ratio statistics.
    - Dummy information can be used for the RFR or other necesssary data.
 
-After completing the follow, submit a pull request back to this repository, and you're done. Godspeed.
+After completing above tasks, submit a pull request back to this repository and you're done. Godspeed.
 
 #### Returns function
 
